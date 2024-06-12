@@ -20,18 +20,12 @@ public class ProcessoSeletivo {
 		do {
 			atendeu = atender();
 			continuarTentando = !atendeu;
-			if(continuarTentando)
-				tentativasRealizadas++;
-			else {
-				System.out.println("CONTATO REALIZADO COM SUCESSO!");
-			}
+			if(continuarTentando) {tentativasRealizadas++;}
+			else {System.out.println("CONTATO REALIZADO COM SUCESSO!");}
 		} while(continuarTentando && tentativasRealizadas < 3);
 		
-		if(atendeu)
-			System.out.println("CONSEGUIMOS CONTATO COM " + candidato + " NA " + tentativasRealizadas + " TENTATIVA.");
-		else {
-			System.out.println("NÃO CONSEGUIMOS CONTATO COM " + candidato + ", NÚMERO MÁXIMO DE TENTATIVAS " + tentativasRealizadas + " REALIZADA.");
-		}
+		if(atendeu) {System.out.println("CONSEGUIMOS CONTATO COM " + candidato + " NA " + tentativasRealizadas + " TENTATIVA.");}
+		else {System.out.println("NÃO CONSEGUIMOS CONTATO COM " + candidato + ", NÚMERO MÁXIMO DE TENTATIVAS " + tentativasRealizadas + " REALIZADA.");}
 	}
 	
 	// método auxiliar
@@ -41,15 +35,11 @@ public class ProcessoSeletivo {
 		String [] candidatos = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO"};
 		System.out.println("Imprimindo a lista de candidatos informando o índice do elemento");
 		
-		for(int indice = 0; indice < candidatos.length; indice++) {
-			System.out.println("O candidato de número " + (indice + 1) + " é o " + candidatos[indice]);
-		}
+		for(int indice = 0; indice < candidatos.length; indice++) {System.out.println("O candidato de número " + (indice + 1) + " é o " + candidatos[indice]);}
 		
 		System.out.println("Forma abreviada de interação for each");
 		
-		for(String candidato: candidatos) {
-			System.out.println("O candidato selecionado foi " + candidato);
-		}
+		for(String candidato: candidatos) {System.out.println("O candidato selecionado foi " + candidato);}
 	}
 	
 	static void selecaoCandidatos() {
@@ -72,9 +62,7 @@ public class ProcessoSeletivo {
 		}
 	}
 	
-	static double valorPretendido() {
-		return ThreadLocalRandom.current().nextDouble(1800, 2200);
-	}
+	static double valorPretendido() {return ThreadLocalRandom.current().nextDouble(1800, 2200);}
 
 	static void analisarCandidato(double salarioPretendido) {
 		double salarioBase = 2000.0;
