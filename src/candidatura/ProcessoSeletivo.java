@@ -9,9 +9,7 @@ public class ProcessoSeletivo {
 		//selecaoCandidatos();
 		//imprimirSelecionados();
 		
-		for(String candidato: candidatos) {
-			entrandoEmContato(candidato);
-		}
+		for(String candidato: candidatos) {entrandoEmContato(candidato);}
 	}
 	
 	static void entrandoEmContato(String candidato) {
